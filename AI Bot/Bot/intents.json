@@ -1,0 +1,64 @@
+{"intents" : [
+    {
+        "tag" : "Greetings",
+        "patterns" : [
+            "hello", 
+            "hey", 
+            "hi", 
+            "good day", 
+            "greetings", 
+            "whats up"
+        ],
+        "responses" : [
+            "Hello!", 
+            "Hey!",
+            "How can I help you?",
+            "Hello, how are you?"
+        ]
+    },
+
+
+    {
+        "tag" : "goodbye",
+        "patterns" : [
+            "bye", 
+            "later", 
+            "cya", 
+            "see you later", 
+            "Im going", 
+            "im leaving",
+            "cao",
+            "see ya",
+            "have a good day",
+            "have a good one"
+        ],
+        "responses" : [
+            "Talk to you later", 
+            "Goodbye!",
+            "Sad to see you go",
+            "Ill be waitng for your return"
+        ]
+    },
+
+    {
+        "tag" : "mood",
+        "patterns" : [
+            "how are you", 
+            "how are you doing", 
+            "how is it going", 
+            "how it be", 
+            "hows life"
+        ],
+        "responses" : [
+            "Im good", 
+            "Im good, how about yourself",
+            "Im doing quite alright",
+            "Lifes not that bad when your arent real",
+            "Im good, how are you?"
+        ]
+    }
+
+
+
+
+]}

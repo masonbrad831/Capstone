@@ -32,3 +32,15 @@ C:\Code\Github\Capstone\Capstone\bin\Debug\netcoreapp3.1\NAudio.Midi.dll
 C:\Code\Github\Capstone\Capstone\bin\Debug\netcoreapp3.1\NAudio.Wasapi.dll
 C:\Code\Github\Capstone\Capstone\bin\Debug\netcoreapp3.1\NAudio.WinForms.dll
 C:\Code\Github\Capstone\Capstone\bin\Debug\netcoreapp3.1\NAudio.WinMM.dll
+C:\Code\Github\Capstone\Capstone\obj\Debug\netcoreapp3.1\Interop.SpeechLib.dll
+C:\Code\Github\Capstone\Capstone\obj\Debug\netcoreapp3.1\Capstone.csproj.ResolveComReference.cache
+C:\Code\Github\Capstone\Capstone\bin\Debug\netcoreapp3.1\Microsoft.Win32.Registry.dll
+C:\Code\Github\Capstone\Capstone\bin\Debug\netcoreapp3.1\System.Security.AccessControl.dll
+C:\Code\Github\Capstone\Capstone\bin\Debug\netcoreapp3.1\System.Security.Principal.Windows.dll
+C:\Code\Github\Capstone\Capstone\bin\Debug\netcoreapp3.1\System.Speech.dll
+C:\Code\Github\Capstone\Capstone\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\Microsoft.Win32.Registry.dll
+C:\Code\Github\Capstone\Capstone\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Security.AccessControl.dll
+C:\Code\Github\Capstone\Capstone\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Security.Principal.Windows.dll
+C:\Code\Github\Capstone\Capstone\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Security.Principal.Windows.dll
+C:\Code\Github\Capstone\Capstone\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Speech.dll
+C:\Code\Github\Capstone\Capstone\bin\Debug\netcoreapp3.1\Interop.SpeechLib.dll

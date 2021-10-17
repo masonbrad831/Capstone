@@ -23,9 +23,15 @@ namespace Capstone
     /// </summary>
     public partial class MainWindow : Window
     {
+
+        SpeechToText speechToText = new SpeechToText();
+        TextToSpeechAPI textToSpeech = new TextToSpeechAPI();
+
         public MainWindow()
         {
             InitializeComponent();
+            speechToText.initGrammer();
+
         }
 
 
@@ -36,7 +42,7 @@ namespace Capstone
             if (Tg_Btn.IsChecked == true)
             {
                 tt_home.Visibility = Visibility.Collapsed;
-                tt_contacts.Visibility = Visibility.Collapsed;
+                tt_browser.Visibility = Visibility.Collapsed;
                 tt_messages.Visibility = Visibility.Collapsed;
                 tt_maps.Visibility = Visibility.Collapsed;
                 tt_settings.Visibility = Visibility.Collapsed;
@@ -45,7 +51,7 @@ namespace Capstone
             else
             {
                 tt_home.Visibility = Visibility.Visible;
-                tt_contacts.Visibility = Visibility.Visible;
+                tt_browser.Visibility = Visibility.Visible;
                 tt_messages.Visibility = Visibility.Visible;
                 tt_maps.Visibility = Visibility.Visible;
                 tt_settings.Visibility = Visibility.Visible;
@@ -73,7 +79,9 @@ namespace Capstone
             Close();
         }
 
-        private void ListViewItem_Selected(object sender, RoutedEventArgs e)
+
+        // MENU BUTTONS CLICKED
+        private void Home_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
 
         }
@@ -99,6 +107,22 @@ namespace Capstone
         //{
 
         //}
+
+        private void ListViewItem_Selected(object sender, RoutedEventArgs e)
+        {
+
+        }
+        private void LV_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
+        private void ListViewItem_Selected_1(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+
     }
 }
 
