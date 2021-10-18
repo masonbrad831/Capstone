@@ -44,3 +44,5 @@ C:\Code\Github\Capstone\Capstone\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netco
 C:\Code\Github\Capstone\Capstone\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Security.Principal.Windows.dll
 C:\Code\Github\Capstone\Capstone\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Speech.dll
 C:\Code\Github\Capstone\Capstone\bin\Debug\netcoreapp3.1\Interop.SpeechLib.dll
+C:\Code\Github\Capstone\Capstone\bin\Debug\netcoreapp3.1\Newtonsoft.Json.Bson.dll
+C:\Code\Github\Capstone\Capstone\bin\Debug\netcoreapp3.1\RestSharp.dll

@@ -1,4 +1,5 @@
-﻿using IBM.Cloud.SDK.Core.Authentication.Iam;
+﻿using Capstone.Controllers;
+using IBM.Cloud.SDK.Core.Authentication.Iam;
 using IBM.Watson.TextToSpeech.v1;
 using System;
 using System.Collections.Generic;
@@ -26,12 +27,13 @@ namespace Capstone
 
         SpeechToText speechToText = new SpeechToText();
         TextToSpeechAPI textToSpeech = new TextToSpeechAPI();
+        VoiceAI voiceAI = new VoiceAI();
+        
 
         public MainWindow()
         {
             InitializeComponent();
             speechToText.initGrammer();
-
         }
 
 

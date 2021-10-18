@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "uoEGWSCB9mx9YQ2d9mryWYHe56lIhKahDQIG1Bk5Zr/O1YNqUQ/IvbK3D5zNbVg42C6FDzsKaKVR2IRl44PZ1g==",
+  "dgSpecHash": "5lcAPAW/smDa/OCeD/zuvMNcU+2YQoDE6GC+0mHQrhelhtb9Uk2JtbfmRUx6nKBxOS7U/hD09RAOjI07IIxOVQ==",
   "success": true,
   "projectFilePath": "C:\\Code\\Github\\Capstone\\Capstone\\Capstone.csproj",
   "expectedPackageFiles": [
@@ -9,6 +9,7 @@
     "C:\\Users\\mason\\.nuget\\packages\\ibm.watson.texttospeech.v1\\5.3.0\\ibm.watson.texttospeech.v1.5.3.0.nupkg.sha512",
     "C:\\Users\\mason\\.nuget\\packages\\jsonsubtypes\\1.6.0\\jsonsubtypes.1.6.0.nupkg.sha512",
     "C:\\Users\\mason\\.nuget\\packages\\jwt\\5.1.1\\jwt.5.1.1.nupkg.sha512",
+    "C:\\Users\\mason\\.nuget\\packages\\microsoft.aspnet.webapi.client\\5.2.7\\microsoft.aspnet.webapi.client.5.2.7.nupkg.sha512",
     "C:\\Users\\mason\\.nuget\\packages\\microsoft.netcore.platforms\\5.0.1\\microsoft.netcore.platforms.5.0.1.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.netcore.targets\\1.1.0\\microsoft.netcore.targets.1.1.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.win32.primitives\\4.3.0\\microsoft.win32.primitives.4.3.0.nupkg.sha512",
@@ -22,6 +23,8 @@
     "C:\\Users\\mason\\.nuget\\packages\\naudio.winmm\\2.0.1\\naudio.winmm.2.0.1.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\netstandard.library\\1.6.1\\netstandard.library.1.6.1.nupkg.sha512",
     "C:\\Users\\mason\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\newtonsoft.json.bson\\1.0.1\\newtonsoft.json.bson.1.0.1.nupkg.sha512",
+    "C:\\Users\\mason\\.nuget\\packages\\restsharp\\106.12.0\\restsharp.106.12.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\runtime.debian.8-x64.runtime.native.system.security.cryptography.openssl\\4.3.0\\runtime.debian.8-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\runtime.fedora.23-x64.runtime.native.system.security.cryptography.openssl\\4.3.0\\runtime.fedora.23-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\runtime.fedora.24-x64.runtime.native.system.security.cryptography.openssl\\4.3.0\\runtime.fedora.24-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",

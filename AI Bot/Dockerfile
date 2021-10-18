@@ -13,6 +13,6 @@ ADD app.py .
 ADD Bot/intents.json Bot/classes.pkl Bot/words.pkl Bot/chatbotmodel.h5 Bot/training.py ./Bot/
 
 RUN pip install -r requirements.txt
-RUN python -m nltk.downloader punkt
+RUN python -m nltk.downloader all
 
 CMD ["python", "./app.py"]
