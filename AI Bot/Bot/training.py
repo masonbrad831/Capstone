@@ -13,7 +13,7 @@ from tensorflow.python.keras.engine.input_layer import Input
 
 lemmatizer = WordNetLemmatizer()
 
-intents = json.loads(open('Bot\intents.json').read())
+intents = json.loads(open('intents.json').read())
 
 words = []
 classes = []
@@ -35,8 +35,8 @@ words = sorted(set(words))
 
 classes = sorted(set(classes))
 
-pickle.dump(words, open('Bot\words.pkl', 'wb'))
-pickle.dump(classes, open('Bot\classes.pkl', 'wb'))
+pickle.dump(words, open('words.pkl', 'wb'))
+pickle.dump(classes, open('classes.pkl', 'wb'))
 
 training = []
 output_empty = [0] * len(classes)
@@ -69,5 +69,5 @@ sgd = SGD(lr=0.01, decay=1e-6, momentum=0.9, nesterov=True)
 model.compile(loss='categorical_crossentropy', optimizer=sgd, metrics=['accuracy'])
 
 hist = model.fit(np.array(train_x), np.array(train_y), epochs=200, batch_size=5, verbose=1)
-model.save('Bot\chatbotmodel.h5', hist)
+model.save('chatbotmodel.h5', hist)
 print("done")

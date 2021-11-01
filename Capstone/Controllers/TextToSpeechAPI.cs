@@ -27,6 +27,15 @@ namespace Capstone
     {
         private static string key = "n5vCzRzoQOW7bhBosz7D3E58-Dl7nuFgMEzk9-m-J1Dc";
         private static string uRL = "https://api.au-syd.text-to-speech.watson.cloud.ibm.com/instances/73384042-ca73-44fc-b98e-733432a043b2";
+
+        public void play(string input)
+        {
+            SaveSound(input);
+            PlaySound();
+            DeleteSound("outputWAV.wav", @"C:\temp");
+            DeleteSound("output.wav", @"C:\temp");
+        }
+
         public void SaveSound(TextBox input, ComboBox dropdown)
         {
             IamAuthenticator authenticator = new IamAuthenticator(apikey: key);

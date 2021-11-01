@@ -6,7 +6,6 @@ namespace Capstone.Controllers
 {
     class VoiceAI
     {
-        
 
         public string GetRequest(string input)
         {
@@ -20,6 +19,7 @@ namespace Capstone.Controllers
 
             Console.WriteLine(response.Content.ToString());
             Trace.WriteLine(response.Content.ToString());
+
             return response.Content.ToString();
         }
     }

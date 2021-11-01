@@ -156,7 +156,7 @@
         </Style>
 
     </Window.Resources>
-
+    
     <Grid>
 
         <!--// Background Color //-->
@@ -174,7 +174,7 @@
                                 Stretch="Fill"/>
 
                 </Grid.Background>
-
+                <ToggleButton x:Name="listen_btn" Content="Listen" Unchecked="listen_btn_Unchecked" HorizontalAlignment="Left" Margin="335,439,0,0" VerticalAlignment="Top" Checked="listen_btn_Checked"/>
             </Grid>
 
             <!--// App Close Button //-->
@@ -321,6 +321,7 @@
                                 </EventTrigger>
 
                             </ToggleButton.Triggers>
+                            <Button Content="Button" Height="8" Width="9"/>
 
 
                         </ToggleButton>
@@ -340,7 +341,7 @@
                         <ListViewItem HorizontalAlignment="Left"
                                       Margin="0,0,0,15" MouseEnter="ListViewItem_MouseEnter" Selected="ListViewItem_Selected_1"
                                       PreviewMouseLeftButtonDown="Home_PreviewMouseLeftButtonDown">
-                            
+
 
                             <StackPanel Orientation="Horizontal"
                                         Width="230">

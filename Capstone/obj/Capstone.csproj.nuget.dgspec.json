@@ -43,6 +43,10 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "dependencies": {
+            "Google.Cloud.Speech.V1": {
+              "target": "Package",
+              "version": "[2.6.0, )"
+            },
             "IBM.Watson.TextToSpeech.v1": {
               "target": "Package",
               "version": "[5.3.0, )"

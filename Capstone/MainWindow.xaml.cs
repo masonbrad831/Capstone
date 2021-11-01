@@ -1,21 +1,9 @@
 ﻿using Capstone.Controllers;
-using IBM.Cloud.SDK.Core.Authentication.Iam;
-using IBM.Watson.TextToSpeech.v1;
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Capstone.Voice;
+using System.Diagnostics;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace Capstone
 {
@@ -28,12 +16,14 @@ namespace Capstone
         SpeechToText speechToText = new SpeechToText();
         TextToSpeechAPI textToSpeech = new TextToSpeechAPI();
         VoiceAI voiceAI = new VoiceAI();
-        
+        Commands commands = new Commands();
+        WakeWord wakeWord = new WakeWord();
 
         public MainWindow()
         {
             InitializeComponent();
-            speechToText.initGrammer();
+            wakeWord.initGrammer();
+            wakeWord.listen();
         }
 
 
@@ -124,7 +114,16 @@ namespace Capstone
 
         }
 
-
+        private void listen_btn_Checked(object sender, RoutedEventArgs e)
+        {
+            Trace.WriteLine("Checked");
+            speechToText.listen();
+        }
+        private void listen_btn_Unchecked(object sender, RoutedEventArgs e)
+        {
+            Trace.WriteLine("Unchecked");
+            speechToText.stopListen();
+        }
     }
 }
 
