@@ -1,5 +1,0 @@
-Flask
-nltk==3.5
-numpy
-tensorflow
-
