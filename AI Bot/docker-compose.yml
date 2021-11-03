@@ -1,0 +1,7 @@
+version: '3'
+
+services:
+    ai-api-servie:
+        build: ./
+        ports:
+            - 5000:5000
