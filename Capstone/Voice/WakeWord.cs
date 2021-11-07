@@ -29,12 +29,11 @@ namespace Capstone.Voice
             {
                 Console.WriteLine(ex.Message);
             }
-        }
-        public void listen()
-        {
+
             SpeechRecognition.RecognizeAsync(RecognizeMode.Multiple);
 
         }
+
 
         public void stopListen()
         {
@@ -50,7 +49,6 @@ namespace Capstone.Voice
             {
                 stopListen();
                 speech.initGrammer();
-                speech.listen();
             }
             Trace.WriteLine("Input " + result);
         }

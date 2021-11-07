@@ -10,7 +10,7 @@ COPY requirements.txt .
 ADD app.py .
 
 
-ADD Bot/intents.json Bot/classes.pkl Bot/words.pkl Bot/chatbotmodel.h5 Bot/training.py ./Bot/
+ADD intents.json classes.pkl words.pkl chatbotmodel.h5 training.py .
 
 RUN pip install -r requirements.txt
 RUN python -m nltk.downloader all

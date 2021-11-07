@@ -16,13 +16,47 @@ namespace Capstone.Controllers
         SpeechToText speech = new SpeechToText();
 
 
-        public string GetResponse(string[] input)
-        {
-            Random rand = new Random();
-            int x = rand.Next(0, input.Length);
 
-            return input[x];
+
+
+
+
+        public void run(string input)
+        {
+
+            Trace.WriteLine("INPUT  " + input);
+            string tag = ai.GetTag(input);
+           
+
+            switch (tag)
+            {
+                case "Greeting":
+                    api.play(ai.GetRequest(input));
+                    break;
+                case "Goodbye":
+                    api.play(ai.GetRequest(input));
+                    break;
+                case "Good Morning":
+                    api.play(ai.GetRequest(input));
+                    break;
+                case "Goodnight":
+                    api.play(ai.GetRequest(input));
+                    break;
+                case "Mood":
+                    api.play(ai.GetRequest(input));
+                    break;
+                case "Time":
+                    Time();
+                    break;
+                case "Date":
+                    Date();
+                    break;
+                default:
+                    Trace.WriteLine("SHITT  " + input + "   " + tag);
+                    break;
+            }
         }
+
         public void Time()
         {
             speech.stopListen();
@@ -35,7 +69,6 @@ namespace Capstone.Controllers
         }       
         public void Search()
         {
-            speech.stopListen();
             api.play("What would you like to search");
         }
 
@@ -45,7 +78,6 @@ namespace Capstone.Controllers
         }       
         public void Location()
         {
-            speech.stopListen();
             api.play("What location would you like to see");
         }
 

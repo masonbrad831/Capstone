@@ -86,6 +86,7 @@
 
   <ItemGroup>
     <Folder Include="MVVM\Model\" />
+    <Folder Include="Wave\" />
   </ItemGroup>
 
   <ItemGroup>

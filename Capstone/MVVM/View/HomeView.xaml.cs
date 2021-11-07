@@ -23,26 +23,29 @@ namespace Capstone.MVVM.View
     {
 
         SpeechToText speechToText = new SpeechToText();
+        WakeWord wake = new WakeWord();
 
         public HomeView()
         {
             InitializeComponent();
+
         }
 
 
 
         private void listen_btn_Click(object sender, RoutedEventArgs e)
         {
-            speechToText.listen();
-
-            
             Image image = VoiceWave;
             if (image.Visibility == Visibility.Visible)
             {
                 image.Visibility = Visibility.Hidden;
+                wake.initGrammer();
+                speechToText.stopListen();
             }
             else
             {
+                wake.stopListen();
+                speechToText.initGrammer();
                 image.Visibility = Visibility.Visible;
             }
         }

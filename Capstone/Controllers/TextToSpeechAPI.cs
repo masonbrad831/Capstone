@@ -32,8 +32,8 @@ namespace Capstone
         {
             SaveSound(input);
             PlaySound();
-            DeleteSound("outputWAV.wav", @"C:\temp");
-            DeleteSound("output.wav", @"C:\temp");
+            DeleteSound("outputWAV.wav", @"..\..\..\Wave");
+            DeleteSound("output.wav", @"..\..\..\Wave");
         }
 
         public void SaveSound(TextBox input, ComboBox dropdown)
@@ -46,7 +46,7 @@ namespace Capstone
             var result = textToSpeech.Synthesize
                 (
                    text: input.Text,
-                   accept: "audio/mp3",
+                   accept: "audio /mp3",
                    voice: dropdown.Text
                 );
 
@@ -72,7 +72,7 @@ namespace Capstone
                    voice: ""
                 );
 
-            using FileStream fs = File.Create(@"C:\temp\output.wav");
+            using FileStream fs = File.Create(@"..\..\..\Wave\output.wav");
             result.Result.WriteTo(fs);
             fs.Close();
             result.Result.Close();
@@ -91,9 +91,9 @@ namespace Capstone
         }
         public void PlaySound()
         {
-            ConvertMp3ToWav(@"C:\temp\output.wav", @"C:\temp\outputWAV.wav");
+            ConvertMp3ToWav(@"..\..\..\Wave\output.wav", @"..\..\..\Wave\outputWAV.wav");
 
-            SoundPlayer simpleSound = new SoundPlayer(@"C:\temp\outputWAV.wav");
+            SoundPlayer simpleSound = new SoundPlayer(@"..\..\..\Wave\outputWAV.wav");
             simpleSound.PlaySync();
         }
         public void DeleteSound(string delete, string path)

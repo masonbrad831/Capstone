@@ -11,29 +11,41 @@ namespace Capstone.Controllers
     class SpeechToText
     {
 
-        string[] grammer = (File.ReadAllLines(@"C:\Code\Github\Capstone\Capstone\Grammer\grammer.txt"));
         public SpeechRecognitionEngine SpeechRecognition = new SpeechRecognitionEngine();
-
-
         VoiceAI ai = new VoiceAI();
-        TextToSpeechAPI TextToSpeech = new TextToSpeechAPI();
+
+
+        public string input { get; set; }
+        
+
 
         public void initGrammer()
         {
             try
             {
                 SpeechRecognition.SetInputToDefaultAudioDevice();
-                SpeechRecognition.LoadGrammar(new Grammar(new GrammarBuilder(new Choices(grammer))));
+
+                DictationGrammar defaultDictationGrammar = new DictationGrammar();
+                defaultDictationGrammar.Name = "default dictation";
+                defaultDictationGrammar.Enabled = true;
+
+                DictationGrammar customDictationGrammar = new DictationGrammar("grammar:dictation");
+                customDictationGrammar.Name = "question dictation";
+                customDictationGrammar.Enabled = true;
+
+                DictationGrammar spellingDictationGrammar = new DictationGrammar("grammar:dictation#spelling");
+                spellingDictationGrammar.Name = "spelling dictation";
+                spellingDictationGrammar.Enabled = true;
+
+                SpeechRecognition.LoadGrammar(defaultDictationGrammar);
+                SpeechRecognition.LoadGrammar(customDictationGrammar);
+                SpeechRecognition.LoadGrammar(spellingDictationGrammar);
                 SpeechRecognition.SpeechRecognized += new EventHandler<SpeechRecognizedEventArgs>(rec_SpeechRecognized);
             }
             catch (Exception ex)
             {
                 Console.WriteLine(ex.Message);
             }
-        }
-        public void listen()
-        {
-            initGrammer();
             SpeechRecognition.RecognizeAsync(RecognizeMode.Multiple);
 
         }
@@ -44,13 +56,16 @@ namespace Capstone.Controllers
         }
 
 
+
         private void rec_SpeechRecognized(object sender, SpeechRecognizedEventArgs e)
         {
-            string result = e.Result.Text;
-            string request = ai.GetRequest(result);
-
-            Trace.WriteLine("Input " + result);
-            Trace.WriteLine("getRequest " + request);
+            input = e.Result.Text;
+            Trace.WriteLine("Input " + input);
+            stopListen();
+            Commands commands = new Commands();
+            commands.run(input);
+            WakeWord wake = new WakeWord();
+            wake.initGrammer();
         }
     }
 }

@@ -13,13 +13,13 @@ namespace Capstone
     public partial class MainWindow : Window
     {
 
-        WakeWord wakeWord = new WakeWord();
 
+        WakeWord WakeWord = new WakeWord();
+        SpeechToText speechToText = new SpeechToText();
         public MainWindow()
         {
             InitializeComponent();
-            wakeWord.initGrammer();
-            wakeWord.listen();
+            WakeWord.initGrammer();
         }
 
     }

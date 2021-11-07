@@ -13,12 +13,12 @@ from tensorflow.keras.models import load_model
 lemmatizer = WordNetLemmatizer()
 
 
-intents = json.loads(open('Bot/intents.json').read())
+intents = json.loads(open('intents.json').read())
 
 
-words = pickle.load(open('Bot/words.pkl', 'rb'))
-classes = pickle.load(open('Bot/classes.pkl', 'rb'))
-model = load_model('Bot/chatbotmodel.h5')
+words = pickle.load(open('words.pkl', 'rb'))
+classes = pickle.load(open('classes.pkl', 'rb'))
+model = load_model('chatbotmodel.h5')
 
 
 
@@ -68,12 +68,20 @@ print("GO! Bot is running!")
 
 app = Flask(__name__)
 
-@app.route("/<string:input>")
+@app.route("/res/<string:input>")
 def ai_api(input: str):
     ints = predict_class(input)
     res = get_response(ints, intents)
+    tag = ints[0]['intent']
     print(res)
     return res
+
+@app.route("/tag/<string:input>")
+def ai_tag(input: str):
+    ints = predict_class(input)
+    tag = ints[0]['intent']
+    print(tag)
+    return tag
 
 if __name__ == "__main__":
     app.run(port=5000, host='0.0.0.0')
