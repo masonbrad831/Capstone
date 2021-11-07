@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1;
 C:\Code\Github\Capstone\Capstone\App.xaml
-212181822
+71570445569
 
-11-47387881
-231901542073
-MainWindow.xaml;Views\Settings.xaml;
+19952594640
+232-1677129102
+MainWindow.xaml;MVVM\View\BrowserView.xaml;MVVM\View\CalendarView.xaml;MVVM\View\HomeView.xaml;MVVM\View\TodoView.xaml;Theme\MenuButtonTheme.xaml;Theme\TextboxTheme.xaml;
 
 False
 

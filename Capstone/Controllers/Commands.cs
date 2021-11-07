@@ -12,16 +12,9 @@ namespace Capstone.Controllers
     {
         TextToSpeechAPI api = new TextToSpeechAPI();
 
-        Location location = new Location();
-        Search search = new Search();
         VoiceAI ai = new VoiceAI();
         SpeechToText speech = new SpeechToText();
 
-        string[] greeting = (File.ReadAllLines(@"C:\Code\Github\Capstone\Capstone\Grammer\greetings.txt"));
-        string[] goodbye = (File.ReadAllLines(@"C:\Code\Github\Capstone\Capstone\Grammer\goodbye.txt"));
-        string[] goodMorning = (File.ReadAllLines(@"C:\Code\Github\Capstone\Capstone\Grammer\goodMorning.txt"));
-        string[] goodnight = (File.ReadAllLines(@"C:\Code\Github\Capstone\Capstone\Grammer\goodnight.txt"));
-        string[] mood = (File.ReadAllLines(@"C:\Code\Github\Capstone\Capstone\Grammer\mood.txt"));
 
         public string GetResponse(string[] input)
         {
@@ -39,13 +32,11 @@ namespace Capstone.Controllers
 
         public void Search(string input)
         {
-            search.stopListen();
         }       
         public void Search()
         {
             speech.stopListen();
             api.play("What would you like to search");
-            search.listen();
         }
 
         public void Location(string location)
@@ -56,7 +47,6 @@ namespace Capstone.Controllers
         {
             speech.stopListen();
             api.play("What location would you like to see");
-            location.listen();
         }
 
         public void Date()
@@ -66,30 +56,6 @@ namespace Capstone.Controllers
 
         }
 
-        public void Greeting()
-        {
-            api.play(GetResponse(greeting));
-        }
-
-        public void Goodbye()
-        {
-            api.play(GetResponse(goodbye));
-        }
-
-        public void Mood()
-        {
-
-        }
-
-        public void Morning()
-        {
-            api.play(GetResponse(goodMorning));
-        }
-
-        public void Goodnight()
-        {
-            api.play(GetResponse(goodnight));
-        }
 
     }
 }

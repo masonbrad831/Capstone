@@ -1,9 +1,11 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
 
   <PropertyGroup>
-    <OutputType>Exe</OutputType>
+    <OutputType>WinExe</OutputType>
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <UseWPF>true</UseWPF>
+    <ApplicationIcon />
+    <StartupObject />
   </PropertyGroup>
 
   <ItemGroup>
@@ -30,9 +32,11 @@
     <PackageReference Include="NAudio" Version="2.0.1" />
     <PackageReference Include="RestSharp" Version="106.12.0" />
     <PackageReference Include="System.Speech" Version="5.0.0" />
+    <PackageReference Include="WpfAnimatedGif" Version="2.0.2" />
   </ItemGroup>
 
   <ItemGroup>
+    <None Remove="Assets\microphone.png" />
     <None Remove="C:\Users\mason\.nuget\packages\vosk\0.3.31\build\lib\win-x64\libwinpthread-1.dll" />
   </ItemGroup>
 
@@ -78,6 +82,14 @@
 
   <ItemGroup>
     <None Remove="C:\Users\mason\.nuget\packages\vosk\0.3.31\build\lib\win-x64\libgcc_s_seh-1.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="MVVM\Model\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Assets\microphone.png" />
   </ItemGroup>
 
 </Project>

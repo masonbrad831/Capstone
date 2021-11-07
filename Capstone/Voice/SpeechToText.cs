@@ -16,8 +16,6 @@ namespace Capstone.Controllers
 
 
         VoiceAI ai = new VoiceAI();
-        Commands commands = new Commands();
-        Location location = new Location();
         TextToSpeechAPI TextToSpeech = new TextToSpeechAPI();
 
         public void initGrammer()
@@ -35,6 +33,7 @@ namespace Capstone.Controllers
         }
         public void listen()
         {
+            initGrammer();
             SpeechRecognition.RecognizeAsync(RecognizeMode.Multiple);
 
         }
@@ -49,43 +48,6 @@ namespace Capstone.Controllers
         {
             string result = e.Result.Text;
             string request = ai.GetRequest(result);
-            switch (request)
-            {
-                case "location":
-                    stopListen();
-                    TextToSpeech.play("What location would you like");
-                    location.listen();
-                    break;
-                case "time":
-                    commands.Time();
-                    break;
-                case "date":
-                    commands.Date();
-                    break;
-                case "search":
-                    stopListen();
-                    TextToSpeech.play("What would you like to search");
-                   break;
-                case "greeting":
-                    commands.Greeting();
-                    break;
-                case "goodbye":
-                    commands.Goodbye();
-                    break;
-                case "good morning":
-                    commands.Morning();
-                    break;
-                case "goodnight":
-                    commands.Goodnight();
-                    break;
-                case "mood":
-                    commands.Mood();
-                    break;
-
-
-                default:
-                    break;
-            }
 
             Trace.WriteLine("Input " + result);
             Trace.WriteLine("getRequest " + request);
