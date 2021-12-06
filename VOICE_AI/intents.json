@@ -1,0 +1,276 @@
+{"intents": [
+    {
+        "tag": "greeting",
+      "patterns": [
+        "Hi", 
+        "Yo",
+        "How are you", 
+        "Is anyone there?", 
+        "Hello", 
+        "Good day", 
+        "Whats up",
+        "Hey",
+        "greetings"
+    ],
+      "responses": [
+          ""
+        ]
+    },
+    {
+        "tag": "goodbye",
+      "patterns": [
+        "cya", 
+        "See you later", 
+        "Goodbye", 
+        "I am Leaving", 
+        "Have a Good day",
+        "bye", 
+        "cao", 
+        "see ya"
+    ],
+      "responses": [
+          ""
+        ]
+    },
+    {
+        "tag": "mood",
+        "patterns": [
+            "how are you",
+            "how are you doing",
+            "how is it going",
+            "how it be",
+            "hows life",
+            "Hello how are you",
+            "Hi how are you"
+        ],"responses": [
+            ""
+        ]
+    },
+    {
+        "tag": "location",
+        "patterns": [
+            "I want to know a location",
+            "I need to know where something is",
+            "I want to know where something is",
+            "Where is this place",
+            "I need a location",
+            "Location"
+        ],
+        "responses": [
+            ""
+        ]
+    },
+    {
+        "tag" : "insult",
+        "patterns": [
+            "Insult me",
+            "make fun of me",
+            "be mean to me",
+            "be mean",
+            "insult"
+        ],
+        "responses": [
+            ""
+        ]
+    },
+    {
+        "tag" : "joke",
+        "patterns": [
+            "tell me a joke",
+            "tell me something funny",
+            "Whats something funny",
+            "Be funny",
+            "Say a joke",
+            "make me laugh"
+        ],
+        "responses": [
+            ""
+        ]
+    },
+    {
+        "tag" : "name",
+        "patterns": [
+            "Whats your name",
+            "what do you call yourself",
+            "what do people call you"
+        ],
+        "responses": [
+            ""
+        ]
+    },
+    {
+        "tag": "add_todo",
+        "patterns": [
+            "i want to add to my todo list", 
+            "add to my todo list"
+        ],"responses": [
+            ""
+        ]
+    },
+    {
+        "tag": "show_todo",
+        "patterns": [
+            "what is in my todo list", 
+            "what do i have todo today"],
+        "responses": [
+            ""
+        ]
+    },
+    {
+        "tag": "search",
+        "patterns": [
+            "I want to search something", 
+            "search",
+            "There is something i want to search"
+        ],
+        "responses": [
+            ""
+        ]
+    },
+    {
+        "tag": "create_note",
+        "patterns": [
+            "create a note", 
+            "write a note"
+        ],
+        "responses": [
+            ""
+        ]
+    },
+    {
+        "tag": "exit",
+        "patterns": [
+            "exit the application", 
+            "exit"],
+        "responses": [
+            ""
+        ]
+    },
+    {
+        "tag": "openChrome",
+        "patterns": [
+            "open chrome", 
+            "chrome"],
+        "responses": [
+            ""
+        ]
+    },
+    {
+        "tag": "exitChrome",
+        "patterns": [
+            "close chrome"
+        ],
+        "responses": [
+            ""
+        ]
+    },
+    {
+        "tag": "calendar",
+        "patterns": [
+            "calendar", 
+            "add to my calender"],
+        "responses": [
+            ""
+        ]
+    },
+    {
+        "tag": "time",
+        "patterns": [
+            "what time is it", 
+            "what is the time",
+            "what is the time"
+        ],
+        "responses": [
+            ""
+        ]
+    },
+    {
+        "tag": "date",
+        "patterns": [
+            "what day is it", 
+            "what is the day",
+            "what is the date",
+            "date"
+        ],
+        "responses": [
+            ""
+        ]
+    },
+    {
+        "tag": "weather",
+        "patterns": [
+            "weather", 
+            "what is the weather"
+        ],
+        "responses": [
+            ""
+        ]
+    },
+    {
+        "tag": "timer",
+        "patterns": [
+            "i want to set a timer", 
+            "i need to set a timer"
+        ],
+        "responses": [
+            ""
+        ]
+    },
+    {
+        "tag": "copy",
+        "patterns": [
+            "copy"
+        ],
+        "responses": [
+            ""
+        ]
+    },
+    {
+        "tag": "paste",
+        "patterns": [
+            "paste"
+        ],
+        "responses": [
+            ""
+        ]
+    },
+    {
+        "tag": "youtube",
+        "patterns": [
+            "open youtube"
+        ],
+        "responses": [
+            ""
+        ]
+    },
+    {
+        "tag": "twitch",
+        "patterns": [
+            "open twitch"
+        ],
+        "responses": [
+            ""
+        ]
+    },
+    {
+        "tag": "canvas",
+        "patterns": [
+            "open canvas"
+        ],
+        "responses": [
+            ""
+        ]
+    },
+    {
+        "tag": "smoothCruz",
+        "patterns": [
+            "Open smooth cruz",
+            "YO YOU KNOW WHAT TO DO"
+        ],
+        "responses": [
+            ""
+        ]
+    }
+  ]
+  
+}
